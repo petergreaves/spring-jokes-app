@@ -6,12 +6,12 @@ import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 
 @Service
 public class ChuckJokeService implements JokeService {
-
+	
 	private final ChuckNorrisQuotes chuckNorrisQuotes;
 	
 
 	public ChuckJokeService(ChuckNorrisQuotes chuckNorrisQuotes) {
-		this.chuckNorrisQuotes = chuckNorrisQuotes;
+		this.chuckNorrisQuotes = new ChuckNorrisQuotes();
 	}
 
 	@Override
@@ -19,5 +19,4 @@ public class ChuckJokeService implements JokeService {
 		// TODO Auto-generated method stub
 		return chuckNorrisQuotes.getRandomQuote();
 	}
-
 }
